@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <meta charset="UTF-8">    
+    <title>Html 5 Tags- Video, Audio and Canvas</title>
+<link href="/css/screen.css" type="text/css" rel="stylesheet" media="screen">
+    <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+	<h1> Video Tag </h1>
+        
+<div style="text-align:center">
+  <button onclick="playPause()">Play/Pause</button>
+  
+  <br><br>
+  <video id="video1" width="420">
+    <source src="wwe.mp4" type="video/mp4">
+    <source src="wwe.ogg" type="video/ogg">
+
+  </video>
+</div>
+
+<script>
+var myVideo = document.getElementById("video1");
+
+function playPause() {
+    if (myVideo.paused)
+        myVideo.play();
+    else
+        myVideo.pause();
+}
+
+</script>
+<br>
+<div>
+                  <h1> Audio Tag </h1>
+<audio controls>
+
+ <source src="God be with you.mp3" type="audio/mpeg">
+ 
+</audio>
+<br>
+
+<h1> Canvas Tag </h1>
+
+<canvas id = "canvas"  width="600" height="400">
+get chrome
+</canvas> 
+
+<script>
+
+window.onload = function () {
+var canvas = document.getElementById('canvas'),
+c = canvas.getContent("2d");
+
+c.fillStyle = "black";
+c.fillRect(0, 0, canvas.width, canvas.height);
+
+};
+</script>
+
+                                
+</div>  
+</body>
+</html>
