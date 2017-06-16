@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--
+sandbox.
+-->
+<html>
+    <head>
+        <title>Manipulating CSS class properties using JavaScript</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <p id ="justice"> <b>Am the one.. The Federal Republic of Ghana. Freedom and Justice </b></p>
+        
+        <button type="button" onclick="visible()"> Click to show the Land of Gold</button>
+        <br><br>
+        <button type="button" onclick="invisible()"> Click to hide this knowledge from the world</button>
+        
+        <script>
+            function visible() {
+                document.getElementById("justice").style.visibility='visible';
+            }
+            
+            function invisible() {
+                document.getElementById("justice").style.visibility='hidden';
+            }
+        </script>
+        
+    </body>
+</html>

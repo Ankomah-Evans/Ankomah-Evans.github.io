@@ -1,0 +1,52 @@
+
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title> loop,function and Array demonstration</title>
+
+<script type="text/javascript">
+
+//Creates an array and calls the countEvens function to test it
+function test(){
+var list = JSON.parse("[" + document.getElementById("array1").value + "]");
+var result = countEvens(list);
+document.getElementById('outputDiv').innerHTML = result
+
+}
+
+//Loops through all elements and counts how many are even numbers
+function countEvens(list){
+var result = 0;
+for (var i=0; i < list.length; i++){
+	var even = list[i] % 2;
+
+		if (even == 0) {
+			
+			result += 1;
+		}
+}
+
+return result;
+
+} 
+
+</script>
+</head>
+
+<body>
+
+<h1>Array Tester</h1>
+Enter an array, separated by commas
+<br>
+<br>
+<input type="text" id="array1"><br>
+
+<br>
+<br>
+<button type='button' onclick='test()'>Count of Even Numbers</button>
+<br> <br>
+<div id="outputDiv"></div>
+
+</body>
+</html>

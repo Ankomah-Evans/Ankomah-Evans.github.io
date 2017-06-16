@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+sandbox
+-->
+<html>
+    <head>
+        <title>DOM Manipulation, creating createElement, appendChild, insertBefore, createTextNode, </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    
+    <body>
+        <ul id="ulnode"></ul>
+        <button onclick="appendLI()"> Append </button>
+        <div id="main"> <p> This is my cit261 explore </p>
+            <p> This is my road in creating a mobile application</p>
+        </div>
+        
+        <script>
+            function appendLI(){
+                var node= document.createElement("LI");
+                var myMainDiv = document.getElementById('main');
+                  
+                var textnode=document.createTextNode("BYUI");
+                node.appendChild(textnode);
+                
+                myMainDiv.insertBefore(textnode, myMainDiv.firstElementChild);
+                document.getElementById("ulnode").appendChild(node);
+            }
+        </script>
+    </body>
+</html>

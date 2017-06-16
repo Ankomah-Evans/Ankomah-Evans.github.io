@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+sanbox
+-->
+<html>
+    <head>
+        <title>Standard JavaScript Events Including those for Mobile Devices ( Ex. onTouchBegin, onLoad, etc.)</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            function setUpEvents() {
+                var content = document.getElementById("content");
+                var button = document.getElementById("show more");
+                
+                button.onclick = function(){
+                    if (content.className == "open"){
+                        //shrink the box
+                        content.className ="";
+                        button.innerHTML = "Show More";
+                    }else{
+                        //open more the box
+                        content.className = "open";
+                        button.innerHTML = "show Less";
+                        
+                    }
+                };
+            }
+            
+            window.onload = function(){
+                setUpEvents();
+            }
+        </script>
+        <div id="content"> </div>
+        <a id ="show-more"> Show More </a>
+        
+        <script src ="test.js"></script>
+    </body>
+</html>
