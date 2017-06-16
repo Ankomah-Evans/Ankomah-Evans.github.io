@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CS 261 examples</title>
+  <title>JSON Parse, Stringify</title>
 </head>
 
-<body bgcolor="#a0f0C0">
 
 	<center>
     <h1>JSON Parse, Stringify</h1>
 
-	item001 <input type="text" id="item001"><br>
-	item002 <input type="text" id="item002"><br>
-	item003 <input type="text" id="item003"><br>
-	item004 <input type="text" id="item004"><br>
+	unit001 <input type="text" id="unit001"><br>
+	unit002 <input type="text" id="unit002"><br>
+	unit003 <input type="text" id="unit003"><br>
+	
 
 	<p id="display"></p>
 
@@ -34,14 +33,12 @@
 	function myFunction() 
 	{
 		document.getElementById("display").innerHTML = 
-		"{\""+ document.getElementById("item001").id + "\":" +
-		"\""+ document.getElementById("item001").value + "\", " +
-		"\""+ document.getElementById("item002").id + "\":" +
-		"\""+ document.getElementById("item002").value + "\", " +
-		"\""+ document.getElementById("item003").id + "\":" +
-		"\""+ document.getElementById("item003").value + "\", " +
-		"\""+ document.getElementById("item004").id + "\":" +
-		"\""+ document.getElementById("item004").value + "\"}";
+		"{\""+ document.getElementById("unit001").id + "\":" +
+		"\""+ document.getElementById("unit001").value + "\", " +
+		"\""+ document.getElementById("unit002").id + "\":" +
+		"\""+ document.getElementById("unit002").value + "\", " +
+		"\""+ document.getElementById("unit003").id + "\":" +
+		"\""+ document.getElementById("unit003").value + "\"}";
 	}
 		
 		var obj;
@@ -52,8 +49,7 @@
 		obj = JSON.parse(tmp);
 		document.getElementById("parseResult").innerHTML = obj.item001 + ", " + 
 														   obj.item002 + ", " + 
-														   obj.item003 + ", " + 
-														   obj.item004;
+														   obj.item003;
 	}
 	
 	function myFunction3() 
@@ -67,5 +63,4 @@
 
 	<hr>
 
-</body>
 </html>
