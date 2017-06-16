@@ -30,9 +30,14 @@ sandbox
             }
 			function remove() 
 	{
-		var parent = document.getElementById("LI");
-		var child = document.getElementById("BYUI");
-		parent.removeChild(child);
+		var node= document.createElement("LI");
+                var myMainDiv = document.getElementById('main');
+                  
+                var textnode=document.removeTextNode("BYUI");
+                node.appendChild(textnode);
+                
+                myMainDiv.insertBefore(textnode, myMainDiv.firstElementChild);
+                document.getElementById("ulnode").removeChildChild(node);
 	}
         </script>
     </body>
