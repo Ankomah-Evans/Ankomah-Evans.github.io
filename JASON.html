@@ -1,16 +1,55 @@
-<!DOCTYPE html>
-<html>
-    <head>  
-<script type="text/javascript">
-var name1 = {user: "Alvin", age:15, country: "France"};
-var name2 = {user: "Devon", age:27, country: "Pakistan"};
-var name3 = {user: "Mill", age:25, country: "Iraq"};
-var name4 = {n1:name1, n2:name2, n3:name3};
-alert(name1.user);
+<center>
+    <h1>JSON Parse, Stringify</h1>
+
+	unit001 <input type="text" id="unit001"><br>
+	unit002 <input type="text" id="unit002"><br>
+	unit003 <input type="text" id="unit003"><br>
+
+	<p id="display"></p>
+
+	<button onclick="myFunction()">display</button><br>
+
+	<button onclick="myFunction2()">JSON parse</button><br>
+
+	<p id="parseResult"></p>
+
+	<button onclick="myFunction3()">JSON stringify</button><br>
+
+	<p id="stringify"></p>
+
+	</center>
+
+
+	<script>
+
+	function myFunction() 
+	{
+		document.getElementById("display").innerHTML = 
+		"{\""+ document.getElementById("unit001").id + "\":" +
+		"\""+ document.getElementById("unit001").value + "\", " +
+		"\""+ document.getElementById("unit002").id + "\":" +
+		"\""+ document.getElementById("unit002").value + "\", " +
+		"\""+ document.getElementById("unit003").id + "\":" +
+		"\""+ document.getElementById("unit003").value + "\", " +
+		
+	}
+		
+		var obj;
+		
+	function myFunction2() 
+	{
+		var tmp = document.getElementById("display").innerHTML;
+		obj = JSON.parse(tmp);
+		document.getElementById("parseResult").innerHTML = obj.unit001 + ", " + 
+														   obj.unit002 + ", " + 
+														   obj.unit003 + ", " + 
+														   
+	}
+	
+	function myFunction3() 
+	{
+		var myJSON = JSON.stringify(obj);
+		document.getElementById("stringifyResult").innerHTML = myJSON;
+	}
+	
 </script>
-    </head>
-<body>
-    <br><br>
-    <br><b>JASON maps perfectly to most programming languages with mutable arrays and dictionaries</b>
-</body>
-</html>
