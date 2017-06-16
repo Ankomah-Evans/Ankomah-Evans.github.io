@@ -12,6 +12,7 @@ sandbox
     <body>
         <ul id="ulnode"></ul>
         <button onclick="appendLI()"> Append </button>
+		<button onclick="remove()">Remove Button</button>
         <div id="main"> <p> This is my cit261 explore </p>
             <p> This is my road in creating a mobile application</p>
         </div>
@@ -27,6 +28,12 @@ sandbox
                 myMainDiv.insertBefore(textnode, myMainDiv.firstElementChild);
                 document.getElementById("ulnode").appendChild(node);
             }
+			function remove() 
+	{
+		var parent = document.getElementById("mark");
+		var child = document.getElementById("btn");
+		parent.removeChild(child);
+	}
         </script>
     </body>
 </html>
