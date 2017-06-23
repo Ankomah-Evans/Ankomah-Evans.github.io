@@ -1,7 +1,4 @@
 <!DOCTYPE html>
-<!--
-sandbox
--->
 <html>
     <head>
         <title>DOM Manipulation, creating createElement, appendChild, insertBefore, createTextNode, </title>
@@ -10,31 +7,36 @@ sandbox
     </head>
     
     <body>
-        <ul id="ulnode"></ul>
-        <button onclick="appendLI()"> Append </button>
-		<button onclick="appendLI()"> InsertBefore </button>
-		<button onclick="remove()">Remove Button</button>
-        <div id="main"> <p> Try what you've got  </p>
-            <p> Mobile App Just Got Interesting</p>
-        </div>
-        
-        <script>
-            function appendLI(){
-                var node= document.createElement("LI");
-                var myMainDiv = document.getElementById('main');
-                  
-                var textnode=document.createTextNode("BYUI");
-                node.appendChild(textnode);
-                
-                myMainDiv.insertBefore(textnode, myMainDiv.firstElementChild);
-                document.getElementById("ulnode").appendChild(node);
-            }
-			function remove() 
-	<script>
+        <ul id="myList">
+  <li id="h">Hack</li>
+  <li id="h">Penetrate</li>
+  
+</ul>
+<button onclick="myFunction()">Append</button>
+
+<script>
 function myFunction() {
-    var list = document.getElementById("LI,BYUI");
-    list.removeChild(list.childNodes[0]);
+    var newItem = document.createElement("li");
+    var node = document.createTextNode("Test");
+  
+    newItem.appendChild(node);
+
+    var element = document.getElementById("myList");
+	var child = document.getElementById("h");
+    element.insertBefore(newItem, child);
 }
 </script>
-    </body>
+
+<button onclick="remove()">Remove</button>
+<script>
+function remove() 
+	{
+		var parent = document.getElementById("myList");
+		var child = document.getElementById("h");
+		parent.removeChild(child);
+	}	
+		
+</script>
+        
+            </body>
 </html>

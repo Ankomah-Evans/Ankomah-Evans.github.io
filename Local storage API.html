@@ -1,27 +1,45 @@
+
 <!DOCTYPE html>
-<!--
-sandbox
--->
 <html>
-    <head>
-        <title>Local Storage API, storing and retrieving simple data</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
+<head>
+  <title></title>
+</head>
 
-<div id="Nana"></div>
+    <h1>Local Storage API, Storing and Retrieving Simple Data, Arrays, Associative Arrays, and Objects</h1>
 
-<script>
+	First Name <input type="text" id="item001"><br>
+	Last Name <input type="text" id="item002"><br><br>
+	
+	<button onclick="saveName()">Save name to local storage</button><br>
+	<button onclick="getSavedName()">Get Saved name from local storage</button><br><br>
+			
+	<div id="result001"></div>
+	<div id="result002"></div><br>
+	
+	<script>
 
-if (typeof(Storage) !== "undefined") {
-     localStorage.setItem("fruit", "Apple and Orange");
-   document.getElementById("Prince").innerHTML = localStorage.getItem("Veggies");
-} else {
-    document.getElementById("Prince").innerHTML = "Sorry can't display my favorite fruit";
-}
-</script>
-
-<p> <b> Updated </b></p>
-	</body>
+	function saveName() 
+	{
+		if (typeof(Storage) !== "undefined") {
+		    // Store
+    		    localStorage.setItem("firstname", document.getElementById("item001").value);
+		    localStorage.setItem("lastname", document.getElementById("item002").value);
+		} else {
+		    document.getElementById("result001").innerHTML = "Sorry, your browser does not support Web Storage...";
+		}
+	}
+	
+	function getSavedName() 
+	{
+		if (typeof(Storage) !== "undefined") {
+		    // Retrieve
+		    document.getElementById("result001").innerHTML = localStorage.getItem("firstname");
+		    document.getElementById("result002").innerHTML = localStorage.getItem("lastname");
+		} else {
+		    document.getElementById("result001").innerHTML = "Sorry, your browser does not support Web Storage...";
+		}
+	}
+		
+	</script>
+</body>
 </html>
