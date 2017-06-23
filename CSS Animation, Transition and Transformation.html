@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+    width: 300px;
+    height: 100px;
+    background-color: green;
+    border: 8px solid orange;
+}
+
+div#myDiv {
+    -ms-transform: rotate(90deg); 
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+	div {
+    width: 100px;
+    height: 100px;
+    background: rgba(186, 0, 255, 0.49);
+    -webkit-transition: width 5s;
+    transition: width 5s;
+}
+
+div:hover {
+    width: 400px;
+}
+	div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    -webkit-animation-name: example; 
+    -webkit-animation-duration: 4s;
+    animation-name: example;
+    animation-duration: 10s;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+
+/* Standard syntax */
+@keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+</style>
+</head>
+<body>
+
+<div>
+</div>
+
+<div id="myDiv">
+</div>
+<p>Move your mouse over the image</p>
+</body>
+</html>
