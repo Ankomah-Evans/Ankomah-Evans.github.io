@@ -9,15 +9,16 @@ Sandbox
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script>
             function getFeet(miles){
+				var miles = parseFloat(document.getElementById('miles').value);
        if(isNaN(miles)){
            alert('please enter a number');
        }else{
            var feet = miles * 5280;
-           return feet;
+          
        }
+				document.getElementById('output').innerHTML = feet;
    } 
-   var miles = prompt ('miles:', '');
-   document.write(getFeet(miles));
+		
            
    /*         var myVariable = 'CIT 26I'
             var X = 200;
@@ -46,6 +47,9 @@ Sandbox
         </script>
     </head>
     <body>
-        
+        Entetr the distance (miles) <input type="text" id="miles">
+		<p><button type="button" onclick="getFeet(miles)"> Get result</button></p>
+		<div id="output"></div>
+		<a href="Array.html" title="CIT 261 Sandbox">Loops, Arrays and Associate Arrays</a>
     </body>
 </html>
