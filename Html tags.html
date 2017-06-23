@@ -45,20 +45,15 @@ function playPause() {
 
 <h1> Canvas Tag </h1>
 
-<canvas id = "canvas"  width="600" height="400" tyle="border:7px solid rgb(179, 174, 161);"></canvas> 
+<canvas id="myCanvas" width="250" height="120" style="border:5px solid #d3d3d3;"></canvas>
+
 
 <script>
-
-var canvas = document.getElementById('canvas'),
-c = canvas.getContent("2d");
-
-c.fillStyle = "black";
-c.fillRect(0, 0, canvas.width, canvas.height);
-
-};
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.font = "25px Forte";
+ctx.fillText("Welcome to Africa",15,60);
 </script>
-
-                                
-</div>  
-</body>
+		</div>
+	</body>
 </html>
