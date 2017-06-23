@@ -12,9 +12,10 @@ sandbox
     <body>
         <ul id="ulnode"></ul>
         <button onclick="appendLI()"> Append </button>
+		<button onclick="appendLI()"> InsertBefore </button>
 		<button onclick="remove()">Remove Button</button>
-        <div id="main"> <p> This is my cit261 explore </p>
-            <p> This is my road in creating a mobile application</p>
+        <div id="main"> <p> Try what you've got  </p>
+            <p> Mobile App Just Got Interesting</p>
         </div>
         
         <script>
@@ -29,16 +30,11 @@ sandbox
                 document.getElementById("ulnode").appendChild(node);
             }
 			function remove() 
-	{
-		var node= document.createElement("LI");
-                var myMainDiv = document.getElementById('main');
-                  
-                var textnode=document.removeTextNode("BYUI");
-                node.appendChild(textnode);
-                
-                myMainDiv.insertBefore(textnode, myMainDiv.firstElementChild);
-                document.getElementById("ulnode").removeChildChild(node);
-	}
-        </script>
+	<script>
+function myFunction() {
+    var list = document.getElementById("LI,BYUI");
+    list.removeChild(list.childNodes[0]);
+}
+</script>
     </body>
 </html>
