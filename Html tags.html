@@ -14,8 +14,6 @@ HTML 5 TAGS.
 	<h1> Video Tag </h1>
         
 <div style="text-align:center">
-  <button onclick="playPause()">Play/Pause</button>
-  
   <br><br>
 	<video width="400" controls>
     <source src="video.mp4" type="video/mp4">
@@ -47,13 +45,10 @@ function playPause() {
 
 <h1> Canvas Tag </h1>
 
-<canvas id = "canvas"  width="600" height="400">
-get chrome
-</canvas> 
+<canvas id = "canvas"  width="600" height="400" tyle="border:7px solid rgb(179, 174, 161);"></canvas> 
 
 <script>
 
-window.onload = function () {
 var canvas = document.getElementById('canvas'),
 c = canvas.getContent("2d");
 
