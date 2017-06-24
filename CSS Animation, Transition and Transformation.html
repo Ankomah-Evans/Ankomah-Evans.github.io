@@ -1,60 +1,79 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-div {
-    width: 300px;
-    height: 100px;
-    background-color: green;
-    border: 8px solid orange;
-}
-
-div#myDiv {
-    -ms-transform: rotate(90deg); 
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
-}
-	div {
-    width: 100px;
-    height: 100px;
-    background: rgba(186, 0, 255, 0.49);
-    -webkit-transition: width 5s;
-    transition: width 5s;
-}
-
-div:hover {
+	<h1>Animation</h1>
+<style> 
+#myDIV {
+    margin: auto;
+    border: 5px solid black;
     width: 400px;
-}
-	div {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    -webkit-animation-name: example; 
-    -webkit-animation-duration: 4s;
-    animation-name: example;
-    animation-duration: 10s;
-}
-
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes example {
-    from {background-color: red;}
-    to {background-color: yellow;}
-}
-
-/* Standard syntax */
-@keyframes example {
-    from {background-color: red;}
-    to {background-color: yellow;}
+    height: 250px;
+    background-color: rgba(80, 255, 161, 0.56);
+    color: white;
 }
 </style>
 </head>
 <body>
+<style> 
+div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    -webkit-animation-name: example;
+    -webkit-animation-duration: 15s;
+    animation-name: example;
+    animation-duration: 15s;
+}
 
-<div>
-</div>
+/* Standard syntax */
+@keyframes example {
+    from {background-color: red,}
+    to {background-color: pink;}
+	to {background-color: rgba(192, 255, 219, 0.51);}
+    to {background-color: #008076;}
+}
+</style>
+<div></div>
+<h1> Transformation</h1>
+<button onclick="myFunction()">Click Here</button>
 
-<div id="myDiv">
-</div>
-<p>Move your mouse over the image</p>
-</body>
+<div id="myDIV">
+ </div>
+
+<script>
+function myFunction() {  
+    // Standard syntax
+    document.getElementById("myDIV").style.transform = "rotate(45deg)"; 
+}
+</script>
+<style> 
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    -webkit-transition: width 15s;
+    transition: width 15s;
+}
+
+div:hover {
+    width: 300px;
+}
+</style>
+<h1>Transition</h1>
+<p>Move your Mouse over the Image </p>
+<style> 
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    -webkit-transition: width 15s; 
+    transition: width 15s;
+}
+
+div:hover {
+    width: 300px;
+}
+</style>
+<div></div>
+	</body>
 </html>

@@ -41,5 +41,42 @@
 	}
 		
 	</script>
+	<script type="text/javascript">
+/*input: width and length of the parcel of land
+ *processing: multiply the with width and length and divide by 43560
+ *output: acres of the parcel of land
+ */
+ 
+function acers () {
+    // Get the width and length from the user.
+	var w = parseFloat(document.getElementById('inputBox').value);
+	var h = parseFloat(document.getElementById('length').value);
+	
+	// Compute the with and length.
+	var acres= w * h/43560;
+	
+	// Display the acres to the user.
+	document.getElementById('acres').innerHTML = acres;
+}
+
+
+</script>
+    <h1>Arrays, Associate Arrays and Objects</h1>
+    Width (feet) <input type="text" id="inputBox"><br>
+    Length (feet) <input type="text" id="length"><br>
+    <button type="button" onclick="acers()">Compute Size</button><br>
+    Size (acres) <div id="acres"></div>
+	
+	<p id="demo"></p>
+
+<script>
+var list = [];
+list[0] = "farming";
+list[1] = "cooking";
+list[2] = "baking";
+document.getElementById("demo").innerHTML =
+list[1] + " " + list.length;
+</script>
+
 </html>
 

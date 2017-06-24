@@ -1,40 +1,126 @@
+
 <!DOCTYPE html>
-<!--
-sanbox
--->
 <html>
-    <head>
-        <title>Standard JavaScript Events Including those for Mobile Devices ( Ex. onTouchBegin, onLoad, etc.)</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <script>
-            function setUpEvents() {
-                var content = document.getElementById("content");
-                var button = document.getElementById("show more");
-                
-                button.onclick = function(){
-                    if (content.className == "open"){
-                        //shrink the box
-                        content.className ="";
-                        button.innerHTML = "Show More";
-                    }else{
-                        //open more the box
-                        content.className = "open";
-                        button.innerHTML = "show Less";
-                        
-                    }
-                };
-            }
-            
-            window.onload = function(){
-                setUpEvents();
-            }
-        </script>
-        <div id="content"> </div>
-        <a id ="show-more"> Show More </a>
-        
-        <script src ="test.js"></script>
-    </body>
+<head>
+  <title></title>
+  
+<style>
+#container 
+{
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: white;
+}
+#animate 
+{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: white;
+}
+</style>
+
+<script>
+function myMove() 
+{
+	var elem = document.getElementById("animate");   
+	var pos = 0;
+  
+	let start = Date.now();
+  
+	var id = setInterval(frame, 30);
+	function frame() 
+	{
+		let timePassed = Date.now() - start;
+
+		if (timePassed >= 1500) 
+		{
+			clearInterval(timer);
+			return;
+		}
+		draw(timePassed); 
+	}
+	function draw(timePassed) 
+	{
+		elem.style.top = timePassed / 3 + 'px';
+		elem.style.left = timePassed / 5 + 'px';
+	}
+}
+function myMove2() 
+{
+	var elem = document.getElementById("animate");   
+	var pos = 0;
+
+	let start = performance.now();
+
+	requestAnimationFrame(function animate(time) 
+	{
+		var timeFraction = (time - start) / 2000; //duration;
+		
+		if (timeFraction > 1) 
+			timeFraction = 1;
+
+		var progress = timeFraction / 2;
+		
+		var aaa = 1 - Math.sin(Math.acos(timeFraction));
+
+		elem.style.top = progress * 100 + '%';
+		elem.style.left = aaa * 100+ '%';
+
+		if (timeFraction < 1) 
+		{
+			requestAnimationFrame(animate);
+		}
+	});
+}
+
+function draw(progress)
+{
+	  train.style.left = timePassed / 5 + 'px';
+}
+
+function onLoadFunction()
+{
+	  alert("onLoadFunction() called");
+}
+
+function reSizeFunction()
+{
+	  alert("reSizeFunction() called");
+}
+
+function focusFunction(id)
+{
+	  alert("focusFunction() called by - " + id);
+}
+
+function keyLoggerFunction(key)
+{
+	var x = key.which || key.keyCode;
+	var y = String.fromCharCode(x);
+	alert("keyLoggerFunction() called, you pressed - " + x + " / " + y);
+}
+
+</script>
+
+</head>
+
+<body bgcolor="white" onload="onLoadFunction()" onresize="reSizeFunction()" onkeypress="keyLoggerFunction(event)">
+
+	<center>
+    <h1>Standard JavaScript Events Including those for Mobile Devices ( Ex. onTouchBegin, onLoad, etc.) and Animation and Transition Events</h1>
+
+<p>
+<button onclick="myMove()" onfocus="focusFunction('myMove()')">Check</button>
+<button onclick="myMove2()" onfocus="focusFunction('myMove2()')">Click</button>
+</p> 
+
+<div id ="container">
+<div id ="animate"></div>
+</div>
+
+	</center>
+
+</body>
 </html>
