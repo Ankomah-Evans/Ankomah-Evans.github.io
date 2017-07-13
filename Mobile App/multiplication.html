@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="visitcount.js"></script>
+    </head>
+<title>multiplication</title>
+<script type="text/javascript">
+
+	function multiply(x, y) {
+	var x = parseFloat(document.getElementById('x').value);
+	var y = parseFloat(document.getElementById('y').value);
+	var a = (x*y);
+	
+	document.getElementById('output').innerHTML = a;
+}
+</script>
+</head>
+<body onload="visitCounter();">
+<h1>Enter the numbers you want to multiply?</h1>
+<input type="text" id="x" size="3"><br>
+<br>
+<input type="text" id="y" size="3"><br>
+<br>
+<button type="button" onclick="multiply()">multiply</button><br>
+<br>
+<div id="output"></div>
+
+</body> 
+</html>
