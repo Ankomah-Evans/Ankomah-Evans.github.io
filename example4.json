@@ -1,0 +1,1 @@
+var newHero = { "name":"Nana Baah", "type":"Maker", "location":"Accra", "color": "Yellow" };

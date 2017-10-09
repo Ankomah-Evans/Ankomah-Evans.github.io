@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XMLHTTPRequest</title>
+    <script src="example4.json"></script>
+</head>
+<body>
+    <center>
+        <button onclick="loadXML()"> Get Data from Server</button>
+        <div id="output"></div>
+    </center>
+    <p>It seems that Github does not allow to make XMLHTTPRequests pointing to other servers, so in this example the data is bein loaded from a file.</p>
+<script>
+function loadXML() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("output").innerHTML = "<br>" + "A new hero!" + "<br>" + "Name: " + newHero.name + "<br>" + 
+          "Archetype: " + newHero.type + "<br>" +
+          "BirthPlace: " + newHero.location + "<br>" + 
+          "Color of Magic: " + newHero.color + "<br>";
+    }
+  };
+  xhttp.open("GET", "https://ankomah-evans.github.io/example4.json", true);
+  xhttp.send();
+}
+</script>
+</body>
+</html>
