@@ -50,6 +50,82 @@ Sandbox
         Entetr the distance (miles) <input type="text" id="miles">
 		<p><button type="button" onclick="getFeet(miles)"> Get result</button></p>
 		<div id="output"></div>
-		<a href="Array.html" title="CIT 261 Sandbox">Loops, Arrays and Associate Arrays</a>
+		<hr>
+        <centre>
+        <p id="displayTestArray"></p>
+
+	<input type="text" id="newArrayElement">
+
+	<button onclick=myFunction(document.getElementById("newArrayElement").value)>add</button>
+	
+	<br><br><br>
+	
+	
+	<button onclick="document.getElementById('demo').innerHTML=Date()">Show Time (MST)?</button>
+
+	<p id="demo"></p>
+	
+	<p id="showAll"></p>
+
+	
+        </centre>
+
+	<hr>
+    <li><a href="index.html">Back To Index</a></li>
+
+	<script>
+		//var testArray = ["first element", "seccond element", "third element", "fourth element", "fifth element"];
+		
+		var count = 0;
+		
+		text = "<ul>";
+		
+		//for(i = 0; i < testArray.length; i++)
+		//{
+		//	text += "<li>" + testArray[i] + "</li>";
+		//}
+
+		//text += "</ul>";
+		
+		//document.getElementById("displayTestArray").innerHTML = text;
+
+		var testAssociativeArray = { "one": "first element", "two": "seccond element", "three": "third element"};
+
+			for(var i in testAssociativeArray)
+			{
+			     //document.write(i + " = " + array[i] + '<br>');
+			     text += "<li>" + testAssociativeArray[i] + "</li>";
+			}
+			
+		text += "</ul>";
+		document.getElementById("displayTestArray").innerHTML = text;
+		
+		function myFunction(input) 
+		{
+			if(input == "lemon")
+			{
+				//testAssociativeArray.push("lemonade");
+			}
+			else
+			{
+				//testAssociativeArray.push(input);
+				testAssociativeArray[count++] = input;
+			}
+			
+			text = "<ul>";
+		
+			for(var i in testAssociativeArray)
+			{
+				text += "<li>" + testAssociativeArray[i] + "</li>";
+			}
+
+			text += "</ul>";
+		
+			document.getElementById("displayTestArray").innerHTML = text;	
+		}
+		
+		
+	</script>
+
     </body>
 </html>
