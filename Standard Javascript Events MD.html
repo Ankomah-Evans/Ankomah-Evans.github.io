@@ -10,14 +10,14 @@
   width: 400px;
   height: 400px;
   position: relative;
-  background: white;
+  background: yellow;
 }
 #animate 
 {
   width: 50px;
   height: 50px;
   position: absolute;
-  background-color: white;
+  background-color: red;
 }
 </style>
 
@@ -106,14 +106,14 @@ function keyLoggerFunction(key)
 
 </head>
 
-<body bgcolor="white" onload="onLoadFunction()" onresize="reSizeFunction()" onkeypress="keyLoggerFunction(event)">
+<body bgcolor="#a0f0C0" onload="onLoadFunction()" onresize="reSizeFunction()" onkeypress="keyLoggerFunction(event)">
 
 	<center>
-    <h1>Standard JavaScript Events Including those for Mobile Devices ( Ex. onTouchBegin, onLoad, etc.) and Animation and Transition Events</h1>
+    <h1>Standard JavaScript Animation and Transition Events</h1>
 
 <p>
-<button onclick="myMove()" onfocus="focusFunction('myMove()')">Check</button>
-<button onclick="myMove2()" onfocus="focusFunction('myMove2()')">Click</button>
+<button onclick="myMove()" onfocus="focusFunction('myMove()')">Click Me</button>
+<button onclick="myMove2()" onfocus="focusFunction('myMove2()')">Click Me 2</button>
 </p> 
 
 <div id ="container">
