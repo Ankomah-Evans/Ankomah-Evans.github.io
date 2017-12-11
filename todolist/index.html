@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>App Body</title>
+<link rel="stylesheet" href="list.css">
+<link rel="stylesheet" href="calendar.css">
+</head>
+<body onload="loadData()">
+<div id="listSocket">
+    <div id="topBar"></div>
+    <div id="addTask">
+        <input type="text" placeholder="Enter a task here" id="taskInput"> 
+        <button id="addButton"><!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In  -->
+<svg version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="24.2px" height="24.2px" viewBox="0 0 24.2 24.2" enable-background="new 0 0 24.2 24.2"
+	 xml:space="preserve">
+<defs>
+</defs>
+<g>
+	<polygon fill="blue" points="24.2,10.6 24.2,13.6 13.6,13.6 13.6,24.2 10.6,24.2 10.6,13.6 0,13.6 0,10.6 10.6,10.6 10.6,0 
+		13.6,0 13.6,10.6 	"/>
+</g>
+</svg>
+</button>
+    </div>
+    <div id="listContainer">
+        <ul class="task">
+            <div id="todo">
+                
+            </div>
+            <li id="divider"></li>
+            <div id="done">
+                
+            </div>
+        </ul>
+    </div>
+    <div id="cover"></div>
+        <div id="buttonContainer">
+           <button id="pickDate">
+<svg version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="30px" height="33.6px" viewBox="0 0 30 33.6" enable-background="new 0 0 30 33.6" xml:space="preserve">
+<defs>
+</defs>
+<g>
+	<path fill="rgba(255, 255, 255, 0.51)" d="M0,3.6v30h30v-30H0z M27.3,31.3H2.8V8.4h24.5V31.3z"/>
+	<rect x="15.5" y="10.8" fill="#7b38c9" width="5" height="5"/>
+	<path fill="#FFFFFF" d="M6,7.2L6,7.2c-0.9,0-1.6-0.7-1.6-1.6v-4C4.4,0.7,5.1,0,6,0h0c0.9,0,1.6,0.7,1.6,1.6v4
+		C7.6,6.5,6.9,7.2,6,7.2z"/>
+	<path fill="rgba(255, 255, 255, 0.6)" d="M24,7.2L24,7.2c-0.9,0-1.6-0.7-1.6-1.6v-4C22.4,0.7,23.1,0,24,0h0c0.9,0,1.6,0.7,1.6,1.6v4
+		C25.6,6.5,24.9,7.2,24,7.2z"/>
+	<rect x="21.5" y="10.8" fill="#FFFFFF" width="5" height="5"/>
+	<rect x="3.5" y="16.8" fill="#FFFFFF" width="5" height="5"/>
+	<rect x="9.5" y="16.8" fill="#FFFFFF" width="5" height="5"/>
+	<rect x="15.5" y="16.8" fill="#FFFFFF" width="5" height="5"/>
+	<rect x="21.5" y="16.8" fill="#FFFFFF" width="5" height="5"/>
+	<rect x="3.5" y="22.8" fill="#FFFFFF" width="5" height="5"/>
+	<rect x="9.5" y="22.8" fill="#FFFFFF" width="5" height="5"/>
+	<rect x="15.5" y="22.8" fill="#FFFFFF" width="5" height="5"/>
+</g>
+</svg>
+<div id="calSocket"></div>
+        </button>
+        </div>
+    <div id="infoButtonContainer">    
+    <button id="infoButton"><!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In  -->
+<svg version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="20px" height="26.3px" viewBox="0 0 20 26.3" enable-background="new 0 0 20 26.3" xml:space="preserve">
+<defs>
+</defs>
+<g>
+	<path fill="rgba(255, 255, 255, 0.96)" d="M10.1,4.5c-3,0-5.5,2.5-5.5,5.5s2.5,5.5,5.5,5.5s5.5-2.5,5.5-5.5S13.1,4.5,10.1,4.5z M10.1,11.7
+		c-1,0-1.7-0.8-1.7-1.7c0-1,0.8-1.7,1.7-1.7S11.8,9,11.8,10C11.8,11,11,11.7,10.1,11.7z"/>
+	<path fill="#FFFFFF" d="M10,0C4.5,0,0,4.5,0,10c0,1.9,0.5,3.6,1.4,5.1h0l5,8.9h0c0.6,1.4,2,2.3,3.6,2.3s3-0.9,3.6-2.3h0l5.1-9.2
+		l0.1-0.1c0.8-1.4,1.2-3,1.2-4.7C20,4.5,15.5,0,10,0z M10.1,16.5c-3.6,0-6.5-2.9-6.5-6.5s2.9-6.5,6.5-6.5s6.5,2.9,6.5,6.5
+		S13.7,16.5,10.1,16.5z"/>
+</g>
+</svg>
+</button>
+    </div>
+    <div id="infoContainer">
+       <div class="loadContainer" >
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+       </div>
+       <div id="info"></div>
+    </div>
+</div>
+<!-- LIBRARIES -->
+<script src="calendar.js"></script>
+<script src="list.js"></script>
+<script src="locale.js"></script>
+<script src='calendarEvents.js'></script>
+</body>
+</html>

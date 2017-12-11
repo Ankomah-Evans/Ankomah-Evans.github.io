@@ -1,0 +1,250 @@
+body{
+    margin: 0px;
+}
+#listSocket {
+    position: relative;
+    width: 360px;
+    height: 640px;
+    background-color: #164a4a;
+    overflow: hidden;
+}
+#topBar {
+    position: relative;
+    width: inherit;
+    height: 20px;
+    background-color: aliceblue;
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+}
+#addTask{
+    position: relative;
+    width: inherit;
+    height: 50px;
+    background-color: rgba(0, 245, 255, 0.35);
+    overflow: hidden;
+}
+#addButton {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-color: cornsilk;
+    border-radius: 50%;
+    top: 5px;
+    transform: translateX( 300px);
+    border-style: solid;
+    outline: none;
+    border-color: cadetblue;
+}
+#addButton svg{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+#taskInput {
+    position: absolute;
+    height: 30px;
+    width: 250px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    outline: none;
+    border: none;
+    background-color: whitesmoke;
+    text-indent: 20px;
+    font-family: sans-serif;
+    font-size: 18px;
+    color: #b77c2f;
+    padding: 0 40px 0 0;
+}
+#listContainer {
+    position: relative;
+    width: 360px;
+    height: 550px;
+    background-color: whitesmoke;
+    padding: 10px 0px;
+    overflow-y: scroll;
+    float: left;
+}
+ul.task {
+    margin: 0;
+    float: left;
+}
+ul.task li{
+    position: relative;
+    margin:0 0 10px -10px;
+    float: left;
+    height: 50px;
+    width: 300px;
+    border-radius: 5px;
+    background-color: lightblue;
+    overflow: hidden;
+    box-shadow: 0px 1px 2px rgba(44, 62, 80, 0.5);
+}
+ul.task li:last-of-type{
+    margin: 0px -10px;
+}
+ul.task li .listButtons {
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    top: 5px;
+    right: 5px;
+}
+ul.task li .listButtons button {
+    margin: 0px 0px 10px 10px;
+    width: 40px;
+    height: 40px;
+    float: left;
+    background: none;
+    border: none;
+}
+#done li {
+    position: relative;
+    background-color: lightgreen;
+}
+
+#divider {
+    align-content: center;
+    position: relative;
+    margin: 20px -10px;
+    height: 5px;
+    width: 300px;
+    border-radius: 5px;
+    background-color: cornflowerblue;
+}
+.desc {
+    position: absolute;
+    top: 5px;
+    left: 15px;
+    width: 200px;
+    font-size: 20px;
+    font-family: Helvetica;
+    color: white;
+}
+.period{
+    position: absolute;
+    top: 33px;
+    left: 15px;
+    font-size: 13px;
+    font-family: sans-serif;
+    color: saddlebrown;
+}
+#buttonContainer{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    top: -20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+#cover{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: inherit;
+    height: 780px;
+    background-color: gray;
+    opacity: .5;
+    display: none;
+}
+#pickDate{   
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: skyblue;
+    border-style: none;
+    border-radius: 50%;
+    box-shadow: 0px 2px 5px #333;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    text-align: center;
+}
+#pickDate:focus{
+    outline: none;
+}
+
+/*********** Information button ************/
+#infoButtonContainer{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    top: -18%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+#infoButton{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: skyblue;
+    border-style: none;
+    border-radius: 50%;
+    box-shadow: 0px 2px 5px #333;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    text-align: center;
+}
+#infoContainer{
+    position: relative;
+    width: 250px;
+    height: 200px;
+    top: -70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 0px 2px 15px #333;
+    display: none;
+}
+#info{
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: sans-serif;
+    text-align: left;
+}
+
+/************ Loading animation *************/
+.loadContainer{
+    width: 70px;
+    text-align: center;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* This is going to reach all the container's children */
+.loadContainer > div{
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background-color: aquamarine;
+    display: inline-block;
+    animation: loop 1.2s infinite;
+}
+/* Set specific delay times for other elements*/
+.loadContainer .circle2{
+   animation-delay: -1s;
+ }
+ .loadContainer .circle3{
+   animation-delay: -0.8s;
+}
+@keyframes loop {
+    0%, 100%{ transform: scale(0.0);}
+    50%  { transform: scale(1.0);}
+}

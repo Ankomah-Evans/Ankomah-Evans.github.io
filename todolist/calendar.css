@@ -1,0 +1,73 @@
+/******************* The calendar's socket *******************/
+#calSocket {
+    position: absolute;
+    width: 210px;
+    height: 380px;
+    display: none;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/******************* The calendar's Header *******************/
+#headContainer{
+    background-color: aqua;
+    height: 180px;
+    text-align: center;
+    }
+#month{
+    height: 20px;
+    background-color: aliceblue;
+    color: white;
+    font-family: sans-serif;
+    font-size: 18px;
+    }
+#dayNum{
+    color: white;
+    background-color: aliceblue;
+    height: 120px;
+    font-size: 105px;
+    }
+#year{
+    color: white;
+    background-color: aliceblue;
+    font-size: 35px;
+    font-family: sans-serif;
+    }
+/******************* The calendar's body *******************/
+table{
+    border-collapse: collapse;
+}
+#bodyContainer{
+    background-color: whitesmoke;
+    height: 210px;
+    width: inherit;
+    color: #444;
+    font-family: sans-serif;
+    }
+#bodyContainer > tr{
+    height: 30px;
+    width: 30px;
+    background-color: whitesmoke;
+    text-align: center;
+    }
+.cell{
+    background-color: whitesmoke;
+}
+#calButtons{
+    background-color: whitesmoke;
+    height: 30px;
+    text-align: center;
+}
+#calButtons > button {
+    margin: 4px;
+    font-family: Consolas;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+    color: aliceblue;
+    background-color: whitesmoke;
+}
+#calButtons > button:hover {
+    cursor: pointer;
+    background-color: lightgray;
+}
